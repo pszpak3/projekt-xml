@@ -1,3 +1,258 @@
 Dziekanat{
-	background-color: blue;
+	background-image: url("images/prism.png");
+	margin: 10px;
+	float: middle;
+	position: relative;
+	left: 10px;
+}
+
+student{
+	background-color: silver;
+	display:block;
+	border: black 1px solid;
+	position: relative;
+	width: 250px;
+	float: left;
+	margin: 5px;
+	height: 230px;
+	font-family: 'Comic Sans MS';
+	
+}
+
+Oceny{
+	display: none;
+}
+
+przedmiot{
+	background-color: silver;
+	display:block;
+	border: black 1px solid;
+	position: relative;
+	width: 330px;
+	float: left;
+	margin: 5px;
+	margin-bottom: 20px;
+	height: 130px;
+	font-family: 'Comic Sans MS';
+	
+}
+
+adres{
+	background-color: silver;
+	display:block;
+	border: black 1px solid;
+	position: relative;
+	width: 220px;
+	float: left;
+	margin: 5px;
+	height: 100px;
+	font-family: 'Comic Sans MS';
+	
+}
+
+Studenci::after{content: "\A";
+  white-space: pre;
+}
+
+Studenci::before{content: "Lista Studentów: ";
+  white-space: pre;
+  float: left;
+  width: 100%;
+  font-family: 'Comic Sans MS';
+  margin: 5px;
+  background-color: silver;
+}
+
+Przedmioty::after{content: "\A";
+  white-space: pre;
+}
+
+Przedmioty::before{content: "Przedmioty: ";
+  white-space: pre;
+  float: left;
+  width: 100%;
+  font-family: 'Comic Sans MS';
+  margin: 5px;
+}
+
+Adresy::after{content: "\A";
+  white-space: pre;
+}
+
+Adresy::before{content: "Adresy: ";
+  white-space: pre;
+  float: left;
+  width: 100%;
+  font-family: 'Comic Sans MS';
+  margin: 5px;
+}
+
+indeks::after{content: "\A";
+  white-space: pre;
+}
+
+indeks::before{content: "indeks: ";
+  white-space: pre;
+}
+
+
+
+imie::after{content: "\A";
+  white-space: pre;
+}
+
+
+imie::before{content: "imie: ";
+  white-space: pre;
+}
+
+
+
+drugieImie::after{content: "\A";
+  white-space: pre;
+}
+
+drugieImie::before{content: "drugieImie: ";
+  white-space: pre;
+}
+
+
+
+nazwisko::after{content: "\A";
+  white-space: pre;
+}
+
+nazwisko::before{content: "nazwisko: ";
+  white-space: pre;
+}
+
+
+
+nrTelefonu::after{content: "\A";
+  white-space: pre;
+}
+
+nrTelefonu::before{content: "nrTelefonu: ";
+  white-space: pre;
+}
+
+
+
+adresEmail::after{content: "\A";
+  white-space: pre;
+}
+
+adresEmail::before{content: "adresEmail: ";
+  white-space: pre;
+}
+
+
+
+typ::after{content: "\A";
+  white-space: pre;
+}
+
+typ::before{content: "typ: ";
+  white-space: pre;
+}
+
+
+
+kierunek::after{content: "\A";
+  white-space: pre;
+}
+
+kierunek::before{content: "kierunek: ";
+  white-space: pre;
+}
+
+
+
+dataUrodzenia::after{content: "\A";
+  white-space: pre;
+}
+
+dataUrodzenia::before{content: "dataUrodzenia: ";
+  white-space: pre;
+}
+
+
+
+
+idPrzedmiot::after{content: "\A";
+  white-space: pre;
+}
+
+idPrzedmiot::before{content: "idPrzedmiot: ";
+  white-space: pre;
+}
+
+
+
+nazwaPrzedmiotu::after{content: "\A";
+  white-space: pre;
+}
+
+nazwaPrzedmiotu::before{content: "nazwaPrzedmiotu: ";
+  white-space: pre;
+}
+
+
+
+prowadzacy::after{content: "\A";
+  white-space: pre;
+}
+
+prowadzacy::before{content: "prowadzacy: ";
+  white-space: pre;
+}
+
+
+
+punktyECTS::after{content: "\A";
+  white-space: pre;
+}
+
+punktyECTS::before{content: "punktyECTS: ";
+  white-space: pre;
+}
+
+
+
+ulica::after{content: "\A";
+  white-space: pre;
+}
+
+ulica::before{content: "ulica: ";
+  white-space: pre;
+}
+
+
+
+nrLokalu::after{content: "\A";
+  white-space: pre;
+}
+
+nrLokalu::before{content: "nrLokalu: ";
+  white-space: pre;
+}
+
+
+
+kodPocztowy::after{content: "\A";
+  white-space: pre;
+}
+
+kodPocztowy::before{content: "kodPocztowy: ";
+  white-space: pre;
+}
+
+
+
+miejscowosc::after{content: "\A";
+  white-space: pre;
+}
+
+miejscowosc::before{content: "miejscowosc: ";
+  white-space: pre;
 }
