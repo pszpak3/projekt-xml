@@ -1,3 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DZIEKANAT>
-</DZIEKANAT>
+<?xml-stylesheet type="text/css" href="studenci.css" ?>
+<Dziekanat>
+	<Studenci>
+		<student>
+			<indeks>253931</indeks>
+			<imie>Marek</imie>
+			<drugieImie>Sebastian</drugieImie>
+			<nazwisko>Staszewski</nazwisko>
+			<nrTelefonu>785452145</nrTelefonu>
+			<adresEmail>aaa@wp.pl</adresEmail>
+			<studia>
+				<typ>stacjonarne licencjackie</typ>
+				<kierunek>Informatyka</kierunek>
+			</studia>
+			<dataUrodzenia>13-06-1995</dataUrodzenia>
+		</student>
+		<student>
+			<indeks>253865</indeks>
+			<imie>Piotr</imie>
+			<drugieImie>Paweł</drugieImie>
+			<nazwisko>Adamski</nazwisko>
+			<nrTelefonu>253485912</nrTelefonu>
+			<adresEmail>bbb@o2.pl</adresEmail>
+			<studia>
+				<typ>niestacjonarne magisterskie</typ>
+				<kierunek>Matematyka</kierunek>
+			</studia>
+			<dataUrodzenia>26-03-1997</dataUrodzenia>
+		</student>
+		<student>
+			<indeks>253487</indeks>
+			<imie>Ignacy</imie>
+			<drugieImie>Kazimierz</drugieImie>
+			<nazwisko>Janowski</nazwisko>
+			<nrTelefonu>321456987</nrTelefonu>
+			<adresEmail>ccc@gmail.com</adresEmail>
+			<studia>
+				<typ>stacjonarne magisterskie</typ>
+				<kierunek>Fizyka</kierunek>
+			</studia>
+			<dataUrodzenia>23-07-1992</dataUrodzenia>
+		</student>
+	</Studenci>
+	<Przedmioty>
+		<przedmiot>
+				<idPrzedmiot>p1</idPrzedmiot>
+				<nazwaPrzedmiotu>Algorytmy</nazwaPrzedmiotu>
+				<prowadzacy>Andrzej Zdechlak</prowadzacy>
+				<punktyECTS>5</punktyECTS>
+		</przedmiot>
+		<przedmiot>
+				<idPrzedmiot>p2</idPrzedmiot>
+				<nazwaPrzedmiotu>Analiza matematyczna</nazwaPrzedmiotu>
+				<prowadzacy>Robert Kubica</prowadzacy>
+				<punktyECTS>7</punktyECTS>
+		</przedmiot>
+		<przedmiot>
+				<idPrzedmiot>p3</idPrzedmiot>
+				<nazwaPrzedmiotu>Fizyka Kwantowa</nazwaPrzedmiotu>
+				<prowadzacy>Albert Ajnsztajn</prowadzacy>
+				<punktyECTS>10</punktyECTS>
+		</przedmiot>
+	</Przedmioty>
+	<Adresy>
+		<adres indeksStudenta="253931">
+			<ulica>Wyzwolenia</ulica>
+			<nrLokalu>12</nrLokalu>
+			<kodPocztowy>83-425</kodPocztowy>
+			<miejscowosc>Dziemiany</miejscowosc>
+		</adres>
+		<adres indeksStudenta="253865">
+			<ulica>Jeziorowa</ulica>
+			<nrLokalu>32</nrLokalu>
+			<kodPocztowy>83-460</kodPocztowy>
+			<miejscowosc>Gdansk</miejscowosc>
+		</adres>
+		<adres indeksStudenta="253487">
+			<ulica>Wybickiego</ulica>
+			<nrLokalu>9</nrLokalu>
+			<kodPocztowy>83-400</kodPocztowy>
+			<miejscowosc>Kościerzyna</miejscowosc>
+		</adres>
+	</Adresy>
+	<Oceny>
+		<ocena idPrzedmiot="p1" indeksStudenta="253931">3</ocena>
+		<ocena idPrzedmiot="p2" indeksStudenta="253931">3</ocena>
+		<ocena idPrzedmiot="p3" indeksStudenta="253931">4</ocena>
+		
+		<ocena idPrzedmiot="p1" indeksStudenta="253865">2</ocena>
+		<ocena idPrzedmiot="p2" indeksStudenta="253865">5</ocena>
+		<ocena idPrzedmiot="p3" indeksStudenta="253865">3</ocena>
+		
+		<ocena idPrzedmiot="p1" indeksStudenta="253487">4</ocena>
+		<ocena idPrzedmiot="p2" indeksStudenta="253487">5</ocena>
+		<ocena idPrzedmiot="p3" indeksStudenta="253487">5</ocena>
+			
+	</Oceny>
+</dziekanat>
