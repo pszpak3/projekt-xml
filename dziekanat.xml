@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="studenci.css" ?>
+<?xml-stylesheet type="text/css" href="style.css" ?>
+<!--DOCTYPE dziekanat SYSTEM "dziekanat.dtd"-->
+
 <Dziekanat>
 	<Studenci>
 		<student>
@@ -7,39 +9,39 @@
 			<imie>Marek</imie>
 			<drugieImie>Sebastian</drugieImie>
 			<nazwisko>Staszewski</nazwisko>
-			<nrTelefonu>785452145</nrTelefonu>
+			<nrTelefonu>785-452-145</nrTelefonu>
 			<adresEmail>aaa@wp.pl</adresEmail>
 			<studia>
 				<typ>stacjonarne licencjackie</typ>
 				<kierunek>Informatyka</kierunek>
 			</studia>
-			<dataUrodzenia>13-06-1995</dataUrodzenia>
+			<dataUrodzenia>1995-06-13</dataUrodzenia>
 		</student>
 		<student>
 			<indeks>253865</indeks>
 			<imie>Piotr</imie>
 			<drugieImie>Paweł</drugieImie>
 			<nazwisko>Adamski</nazwisko>
-			<nrTelefonu>253485912</nrTelefonu>
+			<nrTelefonu>253-485-912</nrTelefonu>
 			<adresEmail>bbb@o2.pl</adresEmail>
 			<studia>
 				<typ>niestacjonarne magisterskie</typ>
 				<kierunek>Matematyka</kierunek>
 			</studia>
-			<dataUrodzenia>26-03-1997</dataUrodzenia>
+			<dataUrodzenia>1997-03-26</dataUrodzenia>
 		</student>
 		<student>
 			<indeks>253487</indeks>
 			<imie>Ignacy</imie>
 			<drugieImie>Kazimierz</drugieImie>
 			<nazwisko>Janowski</nazwisko>
-			<nrTelefonu>321456987</nrTelefonu>
+			<nrTelefonu>321-456-987</nrTelefonu>
 			<adresEmail>ccc@gmail.com</adresEmail>
 			<studia>
 				<typ>stacjonarne magisterskie</typ>
 				<kierunek>Fizyka</kierunek>
 			</studia>
-			<dataUrodzenia>23-07-1992</dataUrodzenia>
+			<dataUrodzenia>1992-07-23</dataUrodzenia>
 		</student>
 	</Studenci>
 	<Przedmioty>
@@ -93,7 +95,6 @@
 		
 		<ocena idPrzedmiot="p1" indeksStudenta="253487">4</ocena>
 		<ocena idPrzedmiot="p2" indeksStudenta="253487">5</ocena>
-		<ocena idPrzedmiot="p3" indeksStudenta="253487">5</ocena>
-			
+		<ocena idPrzedmiot="p3" indeksStudenta="253487">5</ocena>		
 	</Oceny>
-</dziekanat>
+</Dziekanat>
