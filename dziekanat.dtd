@@ -37,6 +37,10 @@
 <!ELEMENT miejscowosc (#PCDATA)>
 
 
+<!ELEMENT Oceny (ocena*)>
+<!ELEMENT ocena (#PCDATA)>
+
+
 <!ATTLIST adres indeksStudenta IDREF #REQUIRED>
 <!ATTLIST ocena indeksStudenta IDREF #REQUIRED>
 <!ATTLIST ocena idPrzedmiot IDREF #REQUIRED>
