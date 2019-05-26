@@ -1,0 +1,42 @@
+<!--<!ENTITY % dane_studenta "indeks,imie,drugieImie,nazwisko,nrTelefonu,adresEmail,studia,dataUrodzenia">
+<!ENTITY % dane_przedmiotu "idPrzedmiot,nazwaPrzedmiotu,prowadzacy,punktyECTS?">
+<!ENTITY % dane_adresu "idPrzedmiot,nazwaPrzedmiotu,prowadzacy,punktyECTS?">-->
+
+<!ELEMENT dziekanat (Studenci,Przedmioty,Adresy,Oceny)>
+
+<!ELEMENT Studenci (student*)>
+<!ELEMENT student (indeks,imie,drugieImie,nazwisko,nrTelefonu,adresEmail,studia,dataUrodzenia)>
+<!ELEMENT indeks (#PCDATA)>
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT drugieImie (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT nrTelefonu (#PCDATA)>
+<!ELEMENT adresEmail (#PCDATA)>
+<!ELEMENT dataUrodzenia (#PCDATA)>
+
+<!ELEMENT studia (typ,kierunek)>
+<!ELEMENT typ (#PCDATA)>
+<!ELEMENT kierunek (#PCDATA)>
+
+
+
+<!ELEMENT Przedmioty (przedmiot+)>
+<!ELEMENT przedmiot (idPrzedmiot,nazwaPrzedmiotu,prowadzacy,punktyECTS?)>
+<!ELEMENT idPrzedmiot (#PCDATA)>
+<!ELEMENT nazwaPrzedmiotu (#PCDATA)>
+<!ELEMENT prowadzacy (#PCDATA)>
+<!ELEMENT punktyECTS (#PCDATA)>
+
+
+
+<!ELEMENT Adresy (adres*)>
+<!ELEMENT adres (ulica,nrLokalu,kodPocztowy,miejscowosc)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT nrLokalu (#PCDATA)>
+<!ELEMENT kodPocztowy (#PCDATA)>
+<!ELEMENT miejscowosc (#PCDATA)>
+
+
+<!ATTLIST adres indeksStudenta IDREF #REQUIRED>
+<!ATTLIST ocena indeksStudenta IDREF #REQUIRED>
+<!ATTLIST ocena idPrzedmiot IDREF #REQUIRED>
