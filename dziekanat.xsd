@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+<!--student type-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+<xsd:simpleType name="indeks_type">
+	<xsd:restriction base="xsd:string">
+		<xsd:pattern value="[0-9]{6}"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+
+<xsd:simpleType name="dane_personalne_type">
+	<xsd:restriction base="xsd:string">
+		<!--xsd:pattern value="[A-Z][a-z]*"/-->
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="telefon_type">
+	<xsd:restriction base="xsd:string">
+		<xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="email_type">
+	<xsd:restriction base="xsd:string">
+		<xsd:pattern value=".+\@.+\..+"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<!--studia type-->
+
+<xsd:simpleType name="typ_type">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="stacjonarne licencjackie"/>
+		<xsd:enumeration value="stacjonarne magisterskie"/>
+		<xsd:enumeration value="niestacjonarne licencjackie"/>
+		<xsd:enumeration value="niestacjonarne magisterskie"/>	
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="kierunek_type">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Informatyka"/>
+		<xsd:enumeration value="Matematyka"/>
+		<xsd:enumeration value="Fizyka"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="studia_type">
+  <xsd:sequence>
+    <xsd:element name="typ" type="typ_type"/>
+	<xsd:element name="kierunek" type="kierunek_type"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<xsd:simpleType name="data_type">
+	<xsd:restriction base="xsd:date">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="student_type">
+  <xsd:sequence>
+    <xsd:element name="indeks" type="indeks_type"/>
+	<xsd:element name="imie" type="dane_personalne_type"/>
+	<xsd:element name="drugieImie" type="dane_personalne_type"/>
+	<xsd:element name="nazwisko" type="dane_personalne_type"/>
+	<xsd:element name="nrTelefonu" type="telefon_type"/>
+	<xsd:element name="adresEmail" type="email_type"/>
+	<xsd:element name="studia" type="studia_type"/>
+	<xsd:element name="dataUrodzenia" type="data_type"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Studenci_type">
+  <xsd:sequence>
+    <xsd:element name="student" type="student_type" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+<!--przedmiot type-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<xsd:simpleType name="idPrzedmiot_type">
+	<xsd:restriction base="xsd:string">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="nazwaPrzedmiotu_type">
+	<xsd:restriction base="xsd:string">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="prowadzacy_type">
+	<xsd:restriction base="xsd:string">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="punktyECTS_type">
+	<xsd:restriction base="xsd:decimal">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="przedmiot_type">
+  <xsd:sequence>
+    <xsd:element name="idPrzedmiot" type="idPrzedmiot_type"/>
+	<xsd:element name="nazwaPrzedmiotu" type="nazwaPrzedmiotu_type"/>
+	<xsd:element name="prowadzacy" type="prowadzacy_type"/>
+	<xsd:element name="punktyECTS" type="punktyECTS_type"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Przedmioty_type">
+  <xsd:sequence>
+    <xsd:element name="przedmiot" type="przedmiot_type" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+<!--adresy type-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<xsd:simpleType name="ulica_type">
+	<xsd:restriction base="xsd:string">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="nrLokalu_type">
+	<xsd:restriction base="xsd:decimal">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="kodPocztowy_type">
+	<xsd:restriction base="xsd:string">
+		<xsd:pattern value="[0-9]{2}-[0-9]{3}"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="miejscowosc_type">
+	<xsd:restriction base="xsd:string">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="adres_type">
+  <xsd:sequence>
+    <xsd:element name="ulica" type="ulica_type"/>
+	<xsd:element name="nrLokalu" type="nrLokalu_type"/>
+	<xsd:element name="kodPocztowy" type="kodPocztowy_type"/>
+	<xsd:element name="miejscowosc" type="miejscowosc_type"/>
+  </xsd:sequence>
+  <xsd:attribute name="indeksStudenta" type="indeks_type" use="required"/>
+</xsd:complexType>
+
+<xsd:complexType name="Adresy_type">
+  <xsd:sequence>
+    <xsd:element name="adres" type="adres_type" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+<!--oceny type-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<xsd:simpleType name="ocena">
+	<xsd:restriction base="xsd:decimal">
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="Oceny_type">
+  <xsd:sequence>
+    <xsd:element name="ocena" type="ocena_type" maxOccurs="unbounded"/>
+  </xsd:sequence>
+ 
+</xsd:complexType>
+
+<xsd:complexType name="ocena_type">
+<xsd:simpleContent>
+    <xsd:extension base="ocena">
+      	<xsd:attribute name="indeksStudenta" type="indeks_type" use="required"/>
+		<xsd:attribute name="idPrzedmiot" type="idPrzedmiot_type" use="required"/>
+    </xsd:extension>
+</xsd:simpleContent>
+</xsd:complexType>
+
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+<!--dziekanat type-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<xsd:complexType name="Dziekanat_type">
+  <xsd:sequence>
+    <xsd:element name="Studenci" type="Studenci_type" maxOccurs="unbounded"/>
+	<xsd:element name="Przedmioty" type="Przedmioty_type" maxOccurs="unbounded"/>
+	<xsd:element name="Adresy" type="Adresy_type" maxOccurs="unbounded"/>
+	<xsd:element name="Oceny" type="Oceny_type" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="Dziekanat" type="Dziekanat_type">
+	<xsd:key name="indeksStudenta_key">
+      <xsd:selector xpath="./Studenci/student"/>
+      <xsd:field xpath="indeks"/>
+    </xsd:key>
+    <xsd:keyref name="indeksStudenta_key_ref" refer="indeksStudenta_key">
+      <xsd:selector xpath="./Adresy/adres"/>
+      <xsd:field xpath="@indeksStudenta"/>
+    </xsd:keyref> 
+	
+    <xsd:keyref name="indeksStudenta_key_ref_2" refer="indeksStudenta_key">
+      <xsd:selector xpath="./Oceny/ocena"/>
+      <xsd:field xpath="@indeksStudenta"/>
+    </xsd:keyref> 
+	
+	<xsd:key name="idPrzedmiot_key">
+      <xsd:selector xpath="./Przedmioty/przedmiot"/>
+      <xsd:field xpath="idPrzedmiot"/>
+    </xsd:key>
+    <xsd:keyref name="idPrzedmiot_key_ref" refer="idPrzedmiot_key">
+      <xsd:selector xpath="./Oceny/ocena"/>
+      <xsd:field xpath="@idPrzedmiot"/>
+    </xsd:keyref> 
+</xsd:element>
+
+</xsd:schema>
