@@ -93,8 +93,8 @@
 		<ocena idPrzedmiot="p2" indeksStudenta="253865">5</ocena>
 		<ocena idPrzedmiot="p3" indeksStudenta="253865">3</ocena>
 		
-		<ocena idPrzedmiot="p1" indeksStudenta="253487">4</ocena>
-		<ocena idPrzedmiot="p2" indeksStudenta="253487">5</ocena>
-		<ocena idPrzedmiot="p3" indeksStudenta="253487">5</ocena>		
+		<ocena idPrzedmiot="p1" indeksStudenta="253487">3</ocena>
+		<!--<ocena idPrzedmiot="p2" indeksStudenta="253487">4</ocena>-->
+		<ocena idPrzedmiot="p3" indeksStudenta="253487">5</ocena>
 	</Oceny>
 </Dziekanat>
